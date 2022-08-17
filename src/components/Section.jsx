@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Section = () => {
+const Section = ({ title, description, backgroundImg, leftBtnText, rightBtnText }) => {
   return (
-      <Wrap>
+      <Wrap bgImage={backgroundImg}>
           <ItemText>
-              <h1>Lorem ipsum</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <h1>{title}</h1>
+              <p>{description}</p>
           </ItemText>
           <ButtonGroup>
-              <LeftButton></LeftButton>
-              <RightButton></RightButton>
+              <LeftButton>{leftBtnText}</LeftButton>
+              <RightButton>{rightBtnText}</RightButton>
           </ButtonGroup>
           <DownArrow src="/images/down-arrow.svg" />
       </Wrap>
@@ -20,13 +20,13 @@ const Section = () => {
 export default Section;
 
 const Wrap = styled.div`
-width: 100vw;
+  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // background-image: url("https://images.unsplash.com/photo-1656480993144-3d735f3a12ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    display: flex;
+  //background-image: url("https://images.unsplash.com/photo-1656480993144-3d735f3a12ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
